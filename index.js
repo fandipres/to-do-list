@@ -34,7 +34,6 @@ app.post('/todo', (req, res) => {
 
 app.get('/todo', (req, res) => {
     var sql = "SELECT * FROM todo";
-    var data = ""
     con.query(sql, function (err, result) {
         res.send(result)
     })
