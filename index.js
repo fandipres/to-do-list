@@ -19,9 +19,9 @@ app.get('/', (req, res) => {
         <html>
             <body>
                 <form action="/todo" method="post">
-                <input name="deskripsi"/>
-                <button>Add</button>
-            </form>
+					<input name="deskripsi"/>
+					<button>Add</button>
+				</form>
             </body>
         </html>`)
 })
@@ -33,15 +33,17 @@ app.post('/todo', (req, res) => {
 })
 
 app.get('/todo', (req, res) => {
-    var sql = "SELECT deskripsi FROM todo";
+    var sql = "SELECT * FROM todo";
     var data = ""
     con.query(sql, function (err, result) {
-        result.forEach((item) => {
-            data += `<div>` + item.deskripsi + `</div>`
-        });
-        res.send(data)
-        res.end();
+        res.send(result)
     })
+})
+
+app.delete('/todo/:id', (req, res) => {
+    var sql = `DELETE FROM todo WHERE id = ${req.params.id}`;
+	con.query(sql)
+	res.end()
 })
 
 app.listen(3000)
