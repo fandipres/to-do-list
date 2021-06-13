@@ -1,49 +1,16 @@
 const express = require('express');
-const app = express();
-const mysql = require('mysql');
 const cors = require('cors');
 
+const app = express();
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cors())
 
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "todo"
-});
+const routerTodo = require('./routers/todo.js')
+const routerUser = require('./routers/user.js')
+const auth = require('./middlewares/auth.js')
 
-app.get('/', (req, res) => {
-    res.send(`
-        <html>
-            <body>
-                <form action="/todo" method="post">
-					<input name="deskripsi"/>
-					<button>Add</button>
-				</form>
-            </body>
-        </html>`)
-})
+app.use('/todo', auth, routerTodo)
+app.use('/user', routerUser)
 
-app.post('/todo', (req, res) => {
-    var sql = "INSERT INTO todo (deskripsi) VALUES ('" + req.body.deskripsi + "')";
-    con.query(sql)
-    res.end()
-})
-
-app.get('/todo', (req, res) => {
-    var sql = "SELECT * FROM todo";
-    var data = ""
-    con.query(sql, function (err, result) {
-        res.send(result)
-    })
-})
-
-app.delete('/todo/:id', (req, res) => {
-    var sql = `DELETE FROM todo WHERE id = ${req.params.id}`;
-	con.query(sql)
-	res.end()
-})
-
-app.listen(3000)
+app.listen(3000, () => {console.log("server started")})
