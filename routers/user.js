@@ -24,8 +24,7 @@ router.post('/', (req, res, next) => {
     var sql = `SELECT * FROM users WHERE username = "${req.body.username}"`
     con.query(sql, function (err, result) {
         if (result.length == 1){
-            console.log("can't add user, this username is already taken")
-            res.send("can't add user, this username is already taken")
+            res.send(405)
         }
         else{
             var sql = `INSERT INTO users (username, password) VALUES ("${req.body.username}", "${req.body.password}")`
@@ -49,8 +48,7 @@ router.delete('/:id', auth, (req, res) => {
     var sql = `SELECT * FROM users`
     con.query(sql, function (err, result) {
         if (result.length == 1){
-            console.log("can't delete, only 1 user in this database")
-            res.send("can't delete, only 1 user in this database")
+            res.send(405)
         }
         else{
             var sql = `DELETE FROM users WHERE id = ${req.params.id}`
