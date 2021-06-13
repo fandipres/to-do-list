@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+const mysql = require('mysql')
 const express = require('express')
 const router = express.Router()
 
@@ -7,7 +7,7 @@ var con = mysql.createConnection({
     user: "root",
     password: "",
     database: "todo"
-});
+})
 
 router.post('/', (req, res) => {
     var sql = `INSERT INTO todo (deskripsi) VALUES ("${req.body.deskripsi}")`
@@ -15,7 +15,7 @@ router.post('/', (req, res) => {
         if (err) throw err
         console.log("1 record inserted")
         res.json({id: result.insertId, deskripsi: req.body.deskripsi})
-    });
+    })
 })
 
 router.get('/', (req, res) => {

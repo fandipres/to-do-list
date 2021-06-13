@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+const mysql = require('mysql')
 const express = require('express')
 const router = express.Router()
 const auth = require('../middlewares/auth.js')
@@ -8,7 +8,7 @@ var con = mysql.createConnection({
     user: "root",
     password: "",
     database: "todo"
-});
+})
 
 router.post('/', (req, res, next) => {
     var sql = `SELECT * FROM users`
