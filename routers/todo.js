@@ -14,7 +14,11 @@ router.post('/', (req, res) => {
 	con.query(sql, function (err, result) {
         if (err) throw err
         console.log("1 record inserted")
-        res.json({id: result.insertId, deskripsi: req.body.deskripsi})
+
+        var sql = "SELECT * FROM todo"
+        con.query(sql, function (err, result) {
+            res.send(result)
+        })
     })
 })
 
@@ -30,7 +34,11 @@ router.delete('/:id', (req, res) => {
     con.query(sql, function (err, result) {
         if (err) throw err
         console.log("1 record deleted")
-        res.end()
+
+        var sql = "SELECT * FROM todo"
+        con.query(sql, function (err, result) {
+            res.send(result)
+        })
     })
 })
 

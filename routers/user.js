@@ -31,7 +31,11 @@ router.post('/', (req, res, next) => {
             con.query(sql, function (err, result) {
                 if (err) throw err
                 console.log("1 record inserted")
-                res.json({id: result.insertId, username: req.body.username})
+
+                var sql = "SELECT * FROM users"
+                con.query(sql, function (err, result) {
+                    res.send(result)
+                })
             })
         }
     })
@@ -54,7 +58,11 @@ router.delete('/:id', auth, (req, res) => {
             var sql = `DELETE FROM users WHERE id = ${req.params.id}`
             con.query(sql)
             console.log("1 record deleted")
-            res.end()
+
+            var sql = "SELECT * FROM users"
+            con.query(sql, function (err, result) {
+                res.send(result)
+            })
         }
     })
 })
