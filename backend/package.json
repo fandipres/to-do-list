@@ -1,0 +1,30 @@
+{
+  "name": "todo-backend",
+  "version": "1.0.0",
+  "description": "A simple todo backend apps for my homework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fandipres/todo-backend.git"
+  },
+  "author": "Fandi Presly Simamora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fandipres/todo-backend/issues"
+  },
+  "homepage": "https://github.com/fandipres/todo-backend#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.14.3",
+    "nodemon": "^3.1.10",
+    "ws": "^8.18.3"
+  }
+}
