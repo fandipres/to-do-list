@@ -12,7 +12,7 @@ Aplikasi web sederhana untuk mengelola daftar tugas pribadi. Dilengkapi dengan s
 
 ## 💻 Pratinjau Aplikasi
 
-![Pratinjau Halaman Home](./images/home-page.png)
+![Pratinjau Halaman Home](./previews/home-page.png)
 
 ## 🛠️ Teknologi yang Digunakan
 
