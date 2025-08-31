@@ -12,6 +12,8 @@ Aplikasi web sederhana untuk mengelola daftar tugas pribadi. Dilengkapi dengan s
 
 ## 💻 Pratinjau Aplikasi
 
+![Pratinjau Halaman Home](./images/home-page.png)
+
 ## 🛠️ Teknologi yang Digunakan
 
 Berikut adalah daftar teknologi utama yang digunakan dalam proyek ini:
@@ -68,7 +70,7 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lingkungan lokal A
 ## 🔗 Tautan
 
 * **Live Demo:** [Belum di-deploy]
-* **Repository:** [github.com/username/nama-repo](https://github.com/username/nama-repo)
+* **Repository:** [github.com/fandipres/to-do-list](https://github.com/fandipres/to-do-list)
 
 ## 📄 Lisensi
 
