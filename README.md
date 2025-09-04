@@ -1,4 +1,4 @@
-# 🚀 To-Do List Web App
+# 🚀 To-Do List (Web App)
 
 A simple web application for managing personal to-do lists. It features a user authentication system, ensuring that each to-do list is private and accessible only by its owner.
 
@@ -13,6 +13,7 @@ A simple web application for managing personal to-do lists. It features a user a
 ## 💻 Application Preview
 
 ![Home Page](./previews/home-page.png)
+*Home page.*
 
 ## 🛠️ Tech Stack
 
