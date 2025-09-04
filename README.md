@@ -12,6 +12,8 @@ A simple web application for managing personal to-do lists. It features a user a
 
 ## 💻 Application Preview
 
+![Login Page](./previews/login-page.png)
+*Login page.*
 ![Home Page](./previews/home-page.png)
 *Home page.*
 
