@@ -22,19 +22,19 @@ A simple web application for managing personal to-do lists. It features a user a
 The main technologies used in this project include:
 
 * **Frontend:**
-    * Vue.js 3 (Composition API)
-    * Vite
     * Axios (HTTP Client)
     * Mitt (Event Bus)
+    * Vite
+    * Vue.js 3 (Composition API)
 * **Backend:**
-    * Node.js
     * Express.js
+    * Node.js
     * WebSocket (ws)
 * **Database:**
     * MySQL
 * **Others:**
-    * JWT (Authentication)
     * Bcrypt (Password Hashing)
+    * JWT (Authentication)
 
 ## ⚙️ Installation & Setup
 
@@ -58,7 +58,7 @@ Follow these steps to get the project running on your local machine:
     npm install
     ```
 
-4.  **Database Configuration:**
+4.  **Database configuration:**
     * Ensure you have a running MySQL server.
     * Create a new database named `todo`.
     * Run the SQL query from the `db/todo.sql` file to create the `users` and `todo` tables.
