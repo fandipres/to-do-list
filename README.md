@@ -41,19 +41,19 @@ The main technologies used in this project include:
 Follow these steps to get the project running on your local machine:
 
 1.  **Clone this repository:**
-    ```
+    ```bash
     git clone https://github.com/fandipres/to-do-list.git
     cd to-do-list
     ```
 
 2.  **Install backend dependencies:**
-    ```
+    ```bash
     cd backend
     npm install
     ```
 
 3.  **Install frontend dependencies:**
-    ```
+    ```bash
     cd frontend
     npm install
     ```
